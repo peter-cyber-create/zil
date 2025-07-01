@@ -4,23 +4,23 @@ export interface Contact {
   email: string;
   message: string;
   responded: boolean;
-  response?: string;
-  createdAt: string;
-  updatedAt: string;
+  response: string | null;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 export interface Quotation {
   id: string;
   name: string;
   email: string;
-  phone?: string;
-  company?: string;
-  service?: string;
-  details?: string;
+  phone: string | null;
+  company: string | null;
+  service: string | null;
+  details: string | null;
   responded: boolean;
-  response?: string;
-  createdAt: string;
-  updatedAt: string;
+  response: string | null;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 export interface Feedback {
@@ -28,9 +28,9 @@ export interface Feedback {
   name: string;
   email: string;
   message: string;
-  rating?: number;
+  rating: number | null;
   responded: boolean;
-  response?: string;
-  createdAt: string;
-  updatedAt: string;
+  response: string | null;
+  createdAt: Date;
+  updatedAt: Date;
 }

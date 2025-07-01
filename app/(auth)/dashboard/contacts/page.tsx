@@ -3,6 +3,10 @@ import RespondForm from "@/components/RespondForm";
 import Link from "next/link";
 import { FaEnvelope, FaTachometerAlt } from "react-icons/fa";
 import LogoutButton from "@/components/LogoutButton";
+import { Contact } from "@/types/dashboard";
+
+// Force dynamic rendering to prevent database calls during build
+export const dynamic = 'force-dynamic';
 
 export default async function ContactsPage() {
   const contacts = await getAllContacts();
@@ -24,7 +28,7 @@ export default async function ContactsPage() {
         </h1>
         <ul className="space-y-4 md:space-y-6 overflow-y-auto max-h-[70vh] pr-0 md:pr-2 w-full">
           {contacts.length === 0 && <li className="text-gray-400 text-lg pl-2 md:pl-0">No contacts yet.</li>}
-          {contacts.map(contact => (
+          {contacts.map((contact: Contact) => (
             <li key={contact.id} className="w-full bg-[#232526] rounded-none md:rounded-xl shadow p-2 md:p-6 flex flex-col border border-[#00c6ff]/10">
               <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2 font-bold text-white text-base md:text-lg">
                 <span>{contact.name}</span>
@@ -43,4 +47,4 @@ export default async function ContactsPage() {
       </main>
     </div>
   );
-} 
+}
