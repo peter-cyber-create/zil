@@ -3,6 +3,7 @@
 ## 🚀 **Quick Setup (5 minutes)**
 
 ### **Step 1: Create MongoDB Atlas Account**
+
 1. Go to [mongodb.com/atlas](https://mongodb.com/atlas)
 2. Click **"Try Free"**
 3. Sign up with email or Google account
@@ -10,6 +11,7 @@
 5. Select **"JavaScript"** as preferred language
 
 ### **Step 2: Create Cluster**
+
 1. Choose **"M0 Sandbox"** (FREE tier)
 2. Cloud Provider: **AWS** (recommended)
 3. Region: Choose closest to your users (e.g., US East, Europe)
@@ -17,6 +19,7 @@
 5. Click **"Create"**
 
 ### **Step 3: Create Database User**
+
 1. In the **"Security"** section, click **"Database Access"**
 2. Click **"Add New Database User"**
 3. Authentication Method: **Password**
@@ -26,6 +29,7 @@
 7. Click **"Add User"**
 
 ### **Step 4: Configure Network Access**
+
 1. Go to **"Network Access"**
 2. Click **"Add IP Address"**
 3. Choose **"Allow Access from Anywhere"** (0.0.0.0/0)
@@ -33,6 +37,7 @@
 4. Click **"Confirm"**
 
 ### **Step 5: Get Connection String**
+
 1. Go to **"Clusters"**
 2. Click **"Connect"** on your cluster
 3. Choose **"Connect your application"**
@@ -46,6 +51,7 @@
 8. Add database name: `/zodongo` at the end before the `?`
 
 ### **Final Connection String Example:**
+
 ```
 mongodb+srv://zodongo-admin:yourpassword@zodongo-cluster.abc123.mongodb.net/zodongo?retryWrites=true&w=majority
 ```
@@ -69,8 +75,9 @@ mongodb+srv://zodongo-admin:yourpassword@zodongo-cluster.abc123.mongodb.net/zodo
 ## 📊 **Database Collections (Auto-created)**
 
 Your application will automatically create these collections:
+
 - `users` - User accounts
-- `accounts` - OAuth accounts  
+- `accounts` - OAuth accounts
 - `sessions` - User sessions
 - `contacts` - Contact form submissions
 - `feedback` - Feedback submissions
@@ -81,6 +88,7 @@ Your application will automatically create these collections:
 ## ✅ **Verification**
 
 Test your database connection:
+
 1. Deploy your application to Vercel
 2. Try registering a new user
 3. Submit a contact form
@@ -104,7 +112,7 @@ Test your database connection:
 - **Connections:** 500 concurrent
 - **Network:** No data transfer charges
 
-*Perfect for your Zodongo International website!*
+_Perfect for your Zodongo International website!_
 
 ---
 

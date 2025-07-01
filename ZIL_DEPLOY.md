@@ -3,6 +3,7 @@
 ## ✅ **CORRECTED DEPLOYMENT COMMANDS**
 
 ### **GitHub Repository Setup:**
+
 ```bash
 git init
 git add .
@@ -13,16 +14,18 @@ git push -u origin main
 ```
 
 ### **Vercel Deployment:**
+
 1. Go to [vercel.com](https://vercel.com)
 2. Import the **`zil`** repository from GitHub
 3. Add environment variables
 4. Deploy to zodongo-int.com
 
 ### **Repository Structure:**
+
 ```
 zil/
 ├── app/              # Main application
-├── components/       # React components  
+├── components/       # React components
 ├── emails/          # Email templates (ContactEmail.tsx ✅)
 ├── lib/             # Utilities
 ├── public/          # Static files

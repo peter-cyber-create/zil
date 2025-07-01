@@ -3,6 +3,7 @@
 ## 📋 **PART 1: Push ZIL Repository to GitHub**
 
 ### **Step 1: Initialize Git Repository**
+
 ```bash
 cd "c:\Users\And1\Desktop\zil"
 git init
@@ -12,6 +13,7 @@ git branch -M main
 ```
 
 ### **Step 2: Create GitHub Repository**
+
 1. Go to [github.com](https://github.com)
 2. Click **"New repository"** (green button)
 3. Repository name: **`zil`**
@@ -20,6 +22,7 @@ git branch -M main
 6. Click **"Create repository"**
 
 ### **Step 3: Connect Local Repository to GitHub**
+
 ```bash
 # Replace YOUR_USERNAME with your actual GitHub username
 git remote add origin https://github.com/YOUR_USERNAME/zil.git
@@ -31,12 +34,14 @@ git push -u origin main
 ## 🚀 **PART 2: Deploy to Vercel**
 
 ### **Step 1: Sign Up for Vercel**
+
 1. Go to [vercel.com](https://vercel.com)
 2. Click **"Sign Up"**
 3. Choose **"Continue with GitHub"**
 4. Authorize Vercel to access your GitHub account
 
 ### **Step 2: Import ZIL Repository**
+
 1. In Vercel dashboard, click **"New Project"**
 2. Find your **`zil`** repository in the list
 3. Click **"Import"** next to the zil repository
@@ -48,6 +53,7 @@ git push -u origin main
    - Output Directory: `.next` (leave default)
 
 ### **Step 3: Configure Environment Variables**
+
 Before deploying, click **"Environment Variables"** and add:
 
 ```
@@ -74,6 +80,7 @@ Value: your-email-password
 ```
 
 ### **Step 4: Deploy**
+
 1. Click **"Deploy"**
 2. Wait 2-3 minutes for build to complete
 3. You'll get a URL like: `https://zil-abc123.vercel.app`
@@ -83,6 +90,7 @@ Value: your-email-password
 ## 🌐 **PART 3: Configure zodongo-int.com Domain**
 
 ### **Step 1: Add Domain in Vercel**
+
 1. In your Vercel project dashboard
 2. Go to **Settings** → **Domains**
 3. Click **"Add Domain"**
@@ -91,6 +99,7 @@ Value: your-email-password
 6. Also add: `www.zodongo-int.com`
 
 ### **Step 2: Get DNS Configuration from Vercel**
+
 Vercel will show you DNS records to add. You'll see something like:
 
 ```
@@ -98,7 +107,7 @@ Type: CNAME
 Name: @
 Value: cname.vercel-dns.com
 
-Type: CNAME  
+Type: CNAME
 Name: www
 Value: cname.vercel-dns.com
 ```
@@ -108,23 +117,27 @@ Value: cname.vercel-dns.com
 #### **If your domain is with:**
 
 **Namecheap:**
+
 1. Login to Namecheap
 2. Go to Domain List → Manage
 3. Advanced DNS tab
 4. Add CNAME records as shown by Vercel
 
 **GoDaddy:**
+
 1. Login to GoDaddy
 2. My Products → DNS
 3. Add CNAME records as shown by Vercel
 
 **Cloudflare:**
+
 1. Login to Cloudflare
 2. Select zodongo-int.com domain
 3. DNS → Records
 4. Add CNAME records as shown by Vercel
 
 **Generic Steps for Any Registrar:**
+
 1. Login to your domain registrar
 2. Find DNS Management/DNS Records section
 3. Add these records:
@@ -135,6 +148,7 @@ Value: cname.vercel-dns.com
 4. Save changes
 
 ### **Step 4: Verify Domain Configuration**
+
 1. DNS changes take 5-60 minutes to propagate
 2. In Vercel, you'll see domain status change to "Valid"
 3. Your site will be live at https://zodongo-int.com
@@ -144,6 +158,7 @@ Value: cname.vercel-dns.com
 ## 🔧 **PART 4: Setup Required Services**
 
 ### **MongoDB Atlas (Database)**
+
 1. Go to [mongodb.com/atlas](https://mongodb.com/atlas)
 2. Sign up for FREE account
 3. Create cluster
@@ -153,7 +168,9 @@ Value: cname.vercel-dns.com
 7. Update DATABASE_URL in Vercel environment variables
 
 ### **Email Configuration**
+
 Contact your hosting provider to set up:
+
 - Email account: `noreply@zodongo-int.com`
 - SMTP credentials
 - Update SMTP variables in Vercel
@@ -163,6 +180,7 @@ Contact your hosting provider to set up:
 ## ✅ **VERIFICATION CHECKLIST**
 
 After deployment, verify:
+
 - [ ] https://zodongo-int.com loads correctly
 - [ ] https://www.zodongo-int.com redirects properly
 - [ ] All pages work (Home, About, Services, Contact)
@@ -178,15 +196,18 @@ After deployment, verify:
 ### **Common Issues:**
 
 **Build Fails:**
+
 - Check environment variables are set correctly
 - Ensure DATABASE_URL is valid
 
 **Domain Not Working:**
+
 - Wait up to 24 hours for DNS propagation
 - Double-check DNS records with your registrar
 - Verify domain spelling in Vercel
 
 **Contact Forms Not Working:**
+
 - Check SMTP credentials
 - Verify email server settings
 - Test email account manually
