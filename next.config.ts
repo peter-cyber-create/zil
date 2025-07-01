@@ -3,10 +3,6 @@ import type { NextConfig } from "next";
 
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-  eslint: {
-    // Disable ESLint during builds
-    ignoreDuringBuilds: true,
-  },
   images: {
     remotePatterns: [
       {
