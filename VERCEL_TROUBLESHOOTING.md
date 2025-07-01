@@ -18,16 +18,19 @@
 Make sure these are set in your Vercel dashboard:
 
 ### **Database Configuration**:
+
 ```
 DATABASE_URL=mongodb+srv://<username>:<password>@cluster0.xjiutih.mongodb.net/zodongo?retryWrites=true&w=majority
 ```
 
 ### **Session Management**:
+
 ```
 SESSION_SECRET=your-secret-key-here
 ```
 
 ### **Email Configuration** (if using contact forms):
+
 ```
 SMTP_HOST=your-smtp-host
 SMTP_PORT=587
@@ -40,21 +43,25 @@ SMTP_PASS=your-email-password
 ## 🔍 Troubleshooting Steps
 
 ### 1. Check Environment Variables
+
 - Go to Vercel Dashboard → Your Project → Settings → Environment Variables
 - Ensure all required variables are set
 - Redeploy after adding missing variables
 
 ### 2. Check Authentication Flow
+
 - Try accessing `/login` first
 - Verify login functionality works
 - Then try accessing `/dashboard`
 
 ### 3. Check Database Connection
+
 - Verify MongoDB Atlas is accessible
 - Check IP whitelist (should include `0.0.0.0/0` for Vercel)
 - Test connection with your MongoDB URI
 
 ### 4. Check Logs
+
 - Go to Vercel Dashboard → Your Project → Functions
 - Check runtime logs for specific error messages
 

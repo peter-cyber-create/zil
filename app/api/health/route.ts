@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { prisma } from '@/lib/db';
 
 export async function GET() {
   try {
@@ -9,10 +10,14 @@ export async function GET() {
       NODE_ENV: process.env.NODE_ENV,
     };
 
+    // Test database connection with a simple query
+    await prisma.$queryRaw`SELECT 1 as test`;
+
     return NextResponse.json({
       status: 'ok',
       timestamp: new Date().toISOString(),
       environment: envCheck,
+      database: 'SQLite - Connected',
       message: 'Health check passed'
     });
 
