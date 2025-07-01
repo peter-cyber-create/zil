@@ -1,9 +1,11 @@
 // Database Connection Test for Zodongo International Limited
 // Run this file to test your MongoDB Atlas connection
 
-require('dotenv').config();
-const { connectToDatabase, disconnectFromDatabase } = require('./lib/mongodb');
-const { PrismaClient } = require('@prisma/client');
+import dotenv from 'dotenv';
+import { connectToDatabase, disconnectFromDatabase } from './lib/mongodb.js';
+import { PrismaClient } from '@prisma/client';
+
+dotenv.config();
 
 async function testDatabaseConnection() {
   console.log('🧪 Testing Database Connection for Zodongo International Limited...\n');

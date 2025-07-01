@@ -1,6 +1,6 @@
 // Simple MongoDB Connection Test for Zodongo International Limited
 
-const { MongoClient, ServerApiVersion } = require("mongodb");
+import { MongoClient, ServerApiVersion } from "mongodb";
 
 // Your MongoDB connection string (directly from .env.local)
 const uri = "mongodb+srv://peterpaulwagidoso:T8tcc2uKSZ1kMiKL@cluster0.xjiutih.mongodb.net/zodongo?retryWrites=true&w=majority&appName=Cluster0";
