@@ -2,7 +2,7 @@
 // Run this file to test your MongoDB Atlas connection
 
 import dotenv from 'dotenv';
-import { connectToDatabase, disconnectFromDatabase } from './lib/mongodb.js';
+import { connectToDatabase, disconnectFromDatabase } from './lib/mongodb.ts';
 import { PrismaClient } from '@prisma/client';
 
 dotenv.config();
