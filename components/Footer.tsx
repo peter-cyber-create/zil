@@ -1,6 +1,7 @@
 import { Cpu } from 'lucide-react'
 import React from 'react'
 import BackToTop from './BackToTop'
+import Image from 'next/image'
 import Link from "next/link";
 
 const Footer = () => {
@@ -47,10 +48,10 @@ const Footer = () => {
         <div className="space-y-8">
             {/* Socials */}
             <div className="flex gap-4">
-            <img src="/facebook.png" alt="Facebook" className='w-6 h-6' />
-            <img src="/linkedin.png" alt="LinkedIn" className='w-6 h-6' />
-            <img src="/x.png" alt="Twitter"  className='w-6 h-6'/>
-            <img src="/instagram.png" alt="Instagram"  className='w-6 h-6'/>
+            <Image src="/facebook.png" alt="Facebook" width={24} height={24} className='w-6 h-6' loading="lazy" />
+            <Image src="/linkedin.png" alt="LinkedIn" width={24} height={24} className='w-6 h-6' loading="lazy" />
+            <Image src="/x.png" alt="Twitter" width={24} height={24} className='w-6 h-6' loading="lazy" />
+            <Image src="/instagram.png" alt="Instagram" width={24} height={24} className='w-6 h-6' loading="lazy" />
             </div>
         </div>
     </section>

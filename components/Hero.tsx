@@ -1,6 +1,7 @@
 import { CircleCheckBig, Target } from 'lucide-react'
 import SampleCarousel from './SampleCarousel'
 import SimpleSlider from './Hero-Carousel-Two'
+import Image from 'next/image'
 import { servicesData } from '@/lib/utils';
 
 
@@ -79,7 +80,16 @@ Join us. Support the mission. Be part of the #Zodongorising movement.</p>
          
          </div>
         <div className="lg:flex lg:justify-center lg:items-center">
-          <img src="https://media.istockphoto.com/id/1344939844/photo/hand-holding-drawing-virtual-lightbulb-with-brain-on-bokeh-background-for-creative-and-smart.webp?a=1&b=1&s=612x612&w=0&k=20&c=Q1LGFdFoZQ0YRWTcHtSZpvfJ_DtgD86aMMuUYxPtz8s=" alt="failed to load img" className='rounded-lg w-full h-fit' />
+          <Image 
+            src="https://media.istockphoto.com/id/1344939844/photo/hand-holding-drawing-virtual-lightbulb-with-brain-on-bokeh-background-for-creative-and-smart.webp?a=1&b=1&s=612x612&w=0&k=20&c=Q1LGFdFoZQ0YRWTcHtSZpvfJ_DtgD86aMMuUYxPtz8s=" 
+            alt="Innovation and smart solutions" 
+            width={600}
+            height={400}
+            className='rounded-lg w-full h-fit'
+            loading="lazy"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+Reh6fGVtcdOvuFixrmTKsMMcfGWVsLcDlGhkeOjOjhQ4AIzjuM8VPzKUgGzGOjmU3ZFu+bCQWp6rSdkUeqLUcCpxbSZ7Qz0t0/wBWWoCUn4TbClZjWCDJO0/wOcpubWzQLKY4sGYJe1QiLkeMwOzlgD3oPFa7zaDCAdkQ+nU8wCQpI7AwsUSSU/BKMHIBHSKhfnZh6dBJZaJc3hZSjpEsSmVWdmCqMhQeACd6G+wQHjlzLhqAuOOQ=="
+          />
         </div>
         </article>
         {/* Hero Carousel Two */}
@@ -90,14 +100,14 @@ Join us. Support the mission. Be part of the #Zodongorising movement.</p>
         <article className='w-full py-5 flex flex-col items-center justify-center space-y-8'>
           <h1 className='text-center text-3xl md:text-4xl font-bold text-[#444444]'>Our <span className='text-green-600'>Key</span> Partners & Customers</h1>
           <div className="grid grid-cols-3 grid-flow-dense lg:grid-flow-row lg:grid-cols-5 gap-4 w-full max-w-4xl p-6 rounded-lg">
-            <img src="/shell.jpg" alt="Shell" className='lg:w-16 lg:h-12 w-12 h-8 object-contain' />
-            <img src="/daewoo.jpg" alt="Daewoo" className='lg:w-16 lg:h-12 w-12 h-8 object-contain' />
-            <img src="/exxon.png" alt="ExxonMobil" className='lg:w-16 lg:h-12 w-12 h-8 object-contain' />
-            <img src="/nitda.png" alt="NITDA" className='lg:w-16 lg:h-12 w-12 h-8 object-contain' />
-            <img src="/veritas.png" alt="Veritas" className='lg:w-16 lg:h-12 w-12 h-8 object-contain' />
-            <img src="/trace.png" alt="Trace" className='lg:w-16 lg:h-12 w-12 h-8 object-contain' />
-            <img src="/epiimtce_white.png" alt="EPIIMTCE" className='lg:w-16 lg:h-12 w-12 h-8 object-contain' />
-            <img src="/pe-logo-white.png" alt="PE Logo" className='lg:w-16 lg:h-12 w-12 h-8 object-contain' />
+            <Image src="/shell.jpg" alt="Shell" width={64} height={48} className='lg:w-16 lg:h-12 w-12 h-8 object-contain' loading="lazy" />
+            <Image src="/daewoo.jpg" alt="Daewoo" width={64} height={48} className='lg:w-16 lg:h-12 w-12 h-8 object-contain' loading="lazy" />
+            <Image src="/exxon.png" alt="ExxonMobil" width={64} height={48} className='lg:w-16 lg:h-12 w-12 h-8 object-contain' loading="lazy" />
+            <Image src="/nitda.png" alt="NITDA" width={64} height={48} className='lg:w-16 lg:h-12 w-12 h-8 object-contain' loading="lazy" />
+            <Image src="/veritas.png" alt="Veritas" width={64} height={48} className='lg:w-16 lg:h-12 w-12 h-8 object-contain' loading="lazy" />
+            <Image src="/trace.png" alt="Trace" width={64} height={48} className='lg:w-16 lg:h-12 w-12 h-8 object-contain' loading="lazy" />
+            <Image src="/epiimtce_white.png" alt="EPIIMTCE" width={64} height={48} className='lg:w-16 lg:h-12 w-12 h-8 object-contain' loading="lazy" />
+            <Image src="/pe-logo-white.png" alt="PE Logo" width={64} height={48} className='lg:w-16 lg:h-12 w-12 h-8 object-contain' loading="lazy" />
             </div>
         </article>
 
