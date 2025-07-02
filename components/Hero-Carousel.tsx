@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import useEmblaCarousel from 'embla-carousel-react'
 import { Star } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
@@ -107,10 +108,16 @@ export default function HeroCarousel() {
               <Card className="border rounded-xs overflow-hidden pt-0 h-full">
                 <CardContent className="px-0 pt-0">
                   <div className="relative mb-4">
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.title}
+                      width={800}
+                      height={400}
                       className="w-full h-48 lg:h-32 object-cover"
+                      loading={i < 3 ? "eager" : "lazy"}
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+Reh6fGVtcdOvuFixrmTKsMMcfGWVsLcDlGhkeOjOjhQ4AIzjuM8VPzKUgGzGOjmU3ZFu+bCQWp6rSdkUeqLUcCpxbSZ7Qz0t0/wBWWoCUn4TbClZjWCDJO0/wOcpubWzQLKY4sGYJe1QiLkeMwOzlgD3oPFa7zaDCAdkQ+nU8wCQpI7AwsUSSU/BKMHIBHSKhfnZh6dBJZaJc3hZSjpEsSmVWdmCqMhQeACd6G+wQHjlzLhqAuOOQ=="
+                      priority={i < 2}
                     />
                   </div>
 

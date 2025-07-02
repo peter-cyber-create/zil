@@ -26,24 +26,16 @@ const page = () => {
           </section>
 
           <section className="mb-12">
-            <h2 className="text-2xl text-green-600 font-semibold mb-4">Regional Office - Nigeria</h2>
-            <p className="mb-2">Port Harcourt, Rivers State</p>
-            <p className="mb-2">Nigeria</p>
-            <p className="mb-2">Phone: +234 702 600 0116</p>
-            <p>Email: nigeria@zodongo.com</p>
-          </section>
-
-          <section className="mb-12">
             <h2 className="text-2xl text-green-600 font-semibold mb-4">Map</h2>
             <div className="w-full h-96 bg-gray-300 dark:bg-gray-700 rounded-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.419415484681!3d37.77492977975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0b1b1b1%3A0x1b1b1b1b1b1b1b1b!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7558977330957!2d32.56827631475442!3d0.3275544996417733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb02bb8a73b1%3A0x1c9d7f4f7c8d6a4e!2sKololo%2C%20Kampala%2C%20Uganda!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen={true}
                 loading="lazy"
-                title="Company Location"
+                title="Zodongo International Limited - Kampala, Uganda"
               ></iframe>
             </div>
           </section>

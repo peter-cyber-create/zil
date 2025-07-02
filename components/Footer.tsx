@@ -34,11 +34,6 @@ const Footer = () => {
                 Website: www.zodongo-int.com
             </p>
             </article>
-            <article className='space-y-2'>
-            <p className='text-green-300'>Nigeria Office</p>
-            <p>Regional Office: Port Harcourt, Rivers State, Nigeria
-            Tel: +234 702 600 0116</p>
-            </article>
             {/* Data Buttons*/}
             <div className="space-y-2 lg:space-y-0 lg:flex lg:gap-2">
             <div className=" flex gap-2 flex-col w-max">
@@ -50,11 +45,6 @@ const Footer = () => {
             </div>
         </div>
         <div className="space-y-8">
-        <article className='space-y-2'>
-            <p className='text-green-300'>Dubai, U.A.E</p>
-            <p>Regional Office: Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E</p>
-            <p>Email: info@zodongo-int.com</p>
-            </article>
             {/* Socials */}
             <div className="flex gap-4">
             <img src="/facebook.png" alt="Facebook" className='w-6 h-6' />

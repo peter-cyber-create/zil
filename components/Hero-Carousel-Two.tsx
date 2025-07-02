@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Slider from "react-slick";
+import Image from "next/image";
 import { Card, CardContent } from "./ui/card";
 const items = [
   {
@@ -38,8 +39,9 @@ export default function SimpleSlider() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     pauseOnHover: true,
+    lazyLoad: 'ondemand' as const,
     responsive: [
       {
         breakpoint: 1024,
@@ -76,10 +78,15 @@ export default function SimpleSlider() {
          <Card key={i} className="rounded-xs overflow-hidden pt-0 h-full">
           <CardContent className="px-0 pt-0">
             <div className="relative mb-4">
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
+                width={600}
+                height={300}
                 className="w-full h-48 lg:h-32 object-cover"
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+Reh6fGVtcdOvuFixrmTKsMMcfGWVsLcDlGhkeOjOjhQ4AIzjuM8VPzKUgGzGOjmU3ZFu+bCQWp6rSdkUeqLUcCpxbSZ7Qz0t0/wBWWoCUn4TbClZjWCDJO0/wOcpubWzQLKY4sGYJe1QiLkeMwOzlgD3oPFa7zaDCAdkQ+nU8wCQpI7AwsUSSU/BKMHIBHSKhfnZh6dBJZaJc3hZSjpEsSmVWdmCqMhQeACd6G+wQHjlzLhqAuOOQ=="
               />
             </div>
             <h3 className="px-6 text-center text-[#444444] font-bold mb-2 line-clamp-2">

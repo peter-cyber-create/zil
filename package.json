@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "preview": "next build && next start",
     "postinstall": "prisma generate"
@@ -14,7 +14,7 @@
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^5.0.1",
     "@portabletext/react": "^3.2.1",
-    "@prisma/client": "^6.7.0",
+    "@prisma/client": "6.7.0",
     "@radix-ui/react-avatar": "^1.1.7",
     "@radix-ui/react-collapsible": "^1.1.8",
     "@radix-ui/react-dialog": "^1.1.11",
@@ -38,7 +38,6 @@
     "jquery": "^3.7.1",
     "lodash": "^4.17.21",
     "lucide-react": "^0.477.0",
-    "mongodb": "^6.17.0",
     "next": "15.2.0",
     "next-themes": "^0.4.6",
     "next-video": "^2.2.0",
