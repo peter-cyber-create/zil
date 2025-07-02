@@ -1,19 +1,16 @@
 "use server";
-import { prisma } from '@/lib/db';
+import { storeFeedback } from '@/lib/redis';
 import nodemailer from 'nodemailer';
 import { render } from '@react-email/components';
 import { FeedbackEmail } from '@/components/email/FeedbackEmail';
 import { revalidatePath } from 'next/cache';
 
 export async function submitFeedback({ name, email, feedback }: { name: string; email: string; feedback: string }) {
-  // Save to DB
-  const fb = await prisma.feedback.create({
-    data: {
-      name,
-      email,
-      message: feedback,
-      responded: false,
-    },
+  // Save to Redis
+  const fb = await storeFeedback({
+    name,
+    email,
+    message: feedback,
   });
 
   // Send email notification

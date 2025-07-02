@@ -1,21 +1,18 @@
 "use server";
-import { prisma } from '@/lib/db';
+import { storeQuotation } from '@/lib/redis';
 import nodemailer from 'nodemailer';
 import { render } from '@react-email/components';
 import { QuotationEmail } from '@/components/email/QuotationEmail';
 import { revalidatePath } from 'next/cache';
 
 export async function submitQuotation({ name, email, phone, service, description }: { name: string; email: string; phone: string; service: string; description: string }) {
-  // Save to DB
-  const quotation = await prisma.quotation.create({
-    data: {
-      name,
-      email,
-      phone,
-      service,
-      details: description,
-      responded: false,
-    },
+  // Save to Redis
+  const quotation = await storeQuotation({
+    name,
+    email,
+    phone,
+    service,
+    details: description,
   });
 
   // Send email notification

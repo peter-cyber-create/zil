@@ -1,19 +1,16 @@
 "use server";
-import { prisma } from '@/lib/db';
+import { storeContact } from '@/lib/redis';
 import nodemailer from 'nodemailer';
 import { render } from '@react-email/components';
 import { ContactEmail } from '@/components/email/ContactEmail';
 import { revalidatePath } from 'next/cache';
 
 export async function submitContact({ name, email, message }: { name: string; email: string; message: string }) {
-  // Save to DB
-  const contact = await prisma.contact.create({
-    data: {
-      name,
-      email,
-      message,
-      responded: false,
-    },
+  // Save to Redis
+  const contact = await storeContact({
+    name,
+    email,
+    message,
   });
 
   // Send email notification
